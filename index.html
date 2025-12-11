@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Filtro</title>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <div class="brand">
+                <div class="logo">🎓</div>
+                <h1>Galeria de Formandos</h1>
+            </div>
+
+
+            <!-- Botão que controla a abertura/fechamento do formulário -->
+            <button id="btnFiltro" aria-expanded="false" aria-controls="formBusca">Filtrar</button>
+
+
+            <!-- Formulário (sem JS de filtros; apenas UI) -->
+            <form id="formBusca" aria-hidden="true">
+                <label for="q">Buscar por nome, turma ou observação</label>
+                <input id="q" type="text" placeholder="Ex.: Maria, 3ºB, Engenharia" />
+
+
+                <label for="year">Ano</label>
+                <select id="year">
+                    <option value="">Todos</option>
+                    <option>2025</option>
+                    <option>2024</option>
+                    <option>2023</option>
+                </select>
+
+
+                <label for="turma">Turma</label>
+                <select id="turma">
+                    <option value="">Todas</option>
+                    <option>1ºA</option>
+                    <option>2ºB</option>
+                    <option>3ºC</option>
+                </select>
+
+
+                <label for="curso">Curso</label>
+                <select id="curso">
+                    <option value="">Todos</option>
+                    <option>Direito</option>
+                    <option>Engenharia Civil</option>
+                    <option>ADS</option>
+                </select>
+
+
+                <label for="turno">Turno</label>
+                <select id="turno">
+                    <option value="">Todos</option>
+                    <option>Manhã</option>
+                    <option>Tarde</option>
+                    <option>Noite</option>
+                </select>
+
+
+                <div class="row-actions">
+                    <button type="button">Aplicar filtros</button>
+                    <button type="button">Limpar</button>
+                </div>
+            </form>
+        </div>
+    </header>
+
+    <main></main>
+
+    <footer></footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
