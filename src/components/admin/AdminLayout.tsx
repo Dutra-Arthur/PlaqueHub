@@ -1,0 +1,26 @@
+import { useEffect } from 'react';
+import { Outlet, useNavigate } from 'react-router-dom';
+import AdminSidebar from './AdminSidebar';
+
+const AdminLayout = () => {
+  const navigate = useNavigate();
+
+  // Check auth on mount
+  useEffect(() => {
+    const auth = localStorage.getItem('adminAuth');
+    if (!auth) {
+      navigate('/admin/login');
+    }
+  }, [navigate]);
+
+  return (
+    <div className="flex min-h-screen bg-background">
+      <AdminSidebar />
+      <main className="flex-1 overflow-auto">
+        <Outlet />
+      </main>
+    </div>
+  );
+};
+
+export default AdminLayout;

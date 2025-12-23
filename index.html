@@ -1,81 +1,27 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arquivo Digital de Placas de Formatura</title>
+    <meta name="description" content="Explore o acervo histórico de placas de formatura da universidade. Um arquivo digital preservando a memória de gerações de formandos." />
+    <meta name="author" content="Universidade" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Filtro</title>
-</head>
+    <meta property="og:title" content="Arquivo Digital de Placas de Formatura" />
+    <meta property="og:description" content="Explore o acervo histórico de placas de formatura da universidade." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-<body>
-    <header>
-        <div class="wrap">
-            <div class="brand">
-                <div class="logo">🎓</div>
-                <h1>Galeria de Formandos</h1>
-            </div>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Universidade" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  </head>
 
-
-            <!-- Botão que controla a abertura/fechamento do formulário -->
-            <button id="btnFiltro" aria-expanded="false" aria-controls="formBusca">Filtrar</button>
-
-
-            <!-- Formulário (sem JS de filtros; apenas UI) -->
-            <form id="formBusca" aria-hidden="true">
-                <label for="q">Buscar por nome, turma ou observação</label>
-                <input id="q" type="text" placeholder="Ex.: Maria, 3ºB, Engenharia" />
-
-
-                <label for="year">Ano</label>
-                <select id="year">
-                    <option value="">Todos</option>
-                    <option>2025</option>
-                    <option>2024</option>
-                    <option>2023</option>
-                </select>
-
-
-                <label for="turma">Turma</label>
-                <select id="turma">
-                    <option value="">Todas</option>
-                    <option>1ºA</option>
-                    <option>2ºB</option>
-                    <option>3ºC</option>
-                </select>
-
-
-                <label for="curso">Curso</label>
-                <select id="curso">
-                    <option value="">Todos</option>
-                    <option>Direito</option>
-                    <option>Engenharia Civil</option>
-                    <option>ADS</option>
-                </select>
-
-
-                <label for="turno">Turno</label>
-                <select id="turno">
-                    <option value="">Todos</option>
-                    <option>Manhã</option>
-                    <option>Tarde</option>
-                    <option>Noite</option>
-                </select>
-
-
-                <div class="row-actions">
-                    <button type="button">Aplicar filtros</button>
-                    <button type="button">Limpar</button>
-                </div>
-            </form>
-        </div>
-    </header>
-
-    <main></main>
-
-    <footer></footer>
-
-    <script src="script.js"></script>
-</body>
-
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
